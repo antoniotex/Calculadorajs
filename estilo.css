@@ -1,0 +1,59 @@
+@font-face {
+     font-family: digit;
+     src: url('font/DS-DIGIT.TTF');
+}
+@font-face {
+     font-family: ananda;
+     src: url('font/AnandaBlackPersonal Use.ttf');
+}
+}
+body {
+	margin-top: 20px;
+}
+h3 {
+	margin-left: 10px;
+	font-family: Ananda;
+	
+} 
+.mod {
+	font-family: Arial;
+	font-size: 10px;
+	float: right;
+	margin-right: 10px;
+}
+.container {
+	border: 10px ridge grey;
+	width: 340px;
+	height: 500px;
+}
+.tela {
+	width: 280px;
+	height: 120px;
+	/*border: 3px solid grey;*/
+	border: none;
+	margin: auto;
+	margin-left: 5px;
+	margin-bottom: 20px;
+	padding-right: 5px;
+	text-align: right;
+	background: rgba(0, 0, 255, 0.3);
+	font-family: digit;
+	font-size: 500%;
+	color: #fff;
+	text-shadow: 0px 0px 20px #fff;
+	box-shadow: 0px 0px 30px rgba(0, 0, 255, 0.3);
+	border-radius: 5px;
+
+}
+.tecla {
+	width: 60px;
+	height: 60px;
+	font-size: 40px;
+	margin: 4.5px;
+}
+.teclas {
+	margin: 0 auto; 
+}
+.teste {
+	border: 1px solid red;
+}

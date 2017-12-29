@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tex Calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <script type="text/javascript">
+    function calcula(num){
+      var acumula = document.calc.tela.value;
+      document.calc.tela.value = acumula + num;
+    }
+    function reset(){
+      document.calc.tela.value = "";
+    }
+    function calcule(){
+      var resultado = eval(document.calc.tela.value);
+      document.calc.tela.value = resultado;
+    }
+
+
+  </script>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div>
+          <h3>Tex Calculator <span class="mod">Mod.:0001</span></h3>
+        </div>
+      </div>
+      <form name="calc">
+       <input class="tela" type="text" name="tela">
+      <div class="teclas">
+        <input type="button" class="tecla btn btn-default" value="1" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="2" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="3" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="*" onclick="calcula(value)">
+      </div>
+      <div class="teclas">
+        <input type="button" class="tecla btn btn-default" value="4" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="5" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="6" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="/" onclick="calcula(value)">
+      </div>
+      <div class="teclas">
+        <input type="button" class="tecla btn btn-default" value="7" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="8" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="9" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-default" value="-" onclick="calcula(value)">
+      </div>
+      <div class="teclas">
+        <input type="button" class="tecla btn btn-danger" value="C" onclick="reset()">
+        <input type="button" class="tecla btn btn-default" value="0" onclick="calcula(value)">
+        <input type="button" class="tecla btn btn-warning" value="=" onclick="calcule()">
+        <input type="button" class="tecla btn btn-default" value="+" onclick="calcula(value)">
+      </div>
+      </form>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
